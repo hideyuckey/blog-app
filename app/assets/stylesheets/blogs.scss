@@ -1,0 +1,46 @@
+// Place all the styles related to the brogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.contents-box{
+  height: 100%;
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+
+.main-contents{
+  min-height: 80px;
+  width:  600px;
+  margin: 20px auto;
+  padding: 10px;
+  border: solid 1px gray;
+}
+
+.blog-under-bar{
+  height:20px;
+}
+
+.blog-under-list{
+  float: right;
+  list-style: none;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.blog-form{
+  width:  600px;
+  margin: 20px auto 0;
+  padding: 10px;
+}
+
+.form{
+  resize: none;
+  // border: none;
+}
+
+.bottun-form{
+  width:  600px;
+  margin: 0 auto;
+  padding: 10px;
+}

@@ -1,0 +1,17 @@
+    <div class ="main-contents">
+      <div class = "cnotents">
+        <div class = "blog-text">
+        <%= simple_format(blog.text) %>
+        </div>
+        <div class = "blog-under-bar">
+        <% if user_signed_in?  && blog.user.id == current_user.id %>
+          <li class = "blog-under-list">
+            <%= link_to "delete", "/blogs/#{blog.id}", class: "edit-link", method: :delete %>
+          </li>
+          <li class = "blog-under-list">
+            <%= link_to "edit", "/blogs/#{blog.id}/edit", class: "edit-link" %>
+          </li>
+          <% end %>
+        </div>
+      </div>
+    </div>

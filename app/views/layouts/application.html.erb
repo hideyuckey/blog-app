@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog-app</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   <header>
+    <div class = "header-bar">
+      <h1 class = "main-logo">
+      <%= link_to "Blog", root_path, class: "edit-link" %>
+      </h1>
+      <div class = "header-list">
+        <% if user_signed_in? %>
+          <li class = "header-right-list">
+            <%= link_to "Sign out", destroy_user_session_path, class: "edit-link", method: :delete %>
+          </li>
+          <li class = "header-right-list">
+          <%= link_to "New", new_blog_path, class: "edit-link" %>
+          </li>
+        <% else %>
+          <li class = "header-right-list">
+            <%= link_to "Sign up", new_user_registration_path, class: "edit-link" %>
+          </li>
+          <li class = "header-right-list">
+            <%= link_to "Sign-in", "/users/sign_in", class: "edit-link" %>
+          </li>
+        <% end %>
+      </div>
+    </div>
+  </header>
+
+    <%= yield %>
+    
+  <footer>
+  </footer>
+  </body>
+</html>
